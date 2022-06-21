@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:register/model/customtextfield_model.dart';
+import 'package:register/model/cutombutton.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -32,6 +33,7 @@ class LoginScreen extends StatelessWidget {
             const Customtextfeild(
               borderColor: Colors.black12,
               hintText: "Password",
+              obscureText: true,
               //labelText: "Password",
             ),
             Row(
@@ -43,19 +45,35 @@ class LoginScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Center(
-              child: ElevatedButton(
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                      side: const BorderSide(color: Colors.pink),
+            const Padding(
+              padding: EdgeInsets.all(25.0),
+              child: CustomButton(
+                text: "SIGN IN",
+                fillColor: Colors.pink,
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("Don't have an account?"),
+                const SizedBox(
+                  width: 5,
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: const Text(
+                    "Create",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-                onPressed: () {},
-                child: const Text("SIGN IN"),
-              ),
+              ],
             ),
           ],
         ),
