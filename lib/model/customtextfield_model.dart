@@ -52,7 +52,7 @@ class Customtextfeild extends StatelessWidget {
                     BorderSide(color: borderColor ?? Colors.white, width: 1.5),
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(25),
                 borderSide:
                     BorderSide(color: borderColor ?? Colors.white, width: 1.5),
               ),
