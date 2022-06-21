@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:register/model/customtextfield_model.dart';
 import 'package:register/model/cutombutton.dart';
 
+import 'register_screen.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -84,7 +86,14 @@ class LoginScreen extends StatelessWidget {
                     width: 5,
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const RegisterScreen(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       "Create",
                       style: TextStyle(
