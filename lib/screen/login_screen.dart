@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:register/model/customtextfield_model.dart';
 import 'package:register/model/cutombutton.dart';
+import 'package:register/screen/forgot_password_screen.dart';
 
 import 'register_screen.dart';
 
@@ -52,14 +53,24 @@ class LoginScreen extends StatelessWidget {
                 obscureText: true,
                 //labelText: "Password",
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: const [
-                  Text(
-                    "Forgot your password?",
-                    style: TextStyle(color: Colors.white, fontSize: 15),
-                  ),
-                ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ForgotPasswordScreen(),
+                    ),
+                  );
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: const [
+                    Text(
+                      "Forgot your password?",
+                      style: TextStyle(color: Colors.white, fontSize: 15),
+                    ),
+                  ],
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(25.0),
