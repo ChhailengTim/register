@@ -89,6 +89,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   //labelText: "Username",
                 ),
                 const Customtextfeild(
+                  obscureText: true,
                   borderColor: Colors.white,
                   hintText: "Password",
                   //labelText: "Username",
