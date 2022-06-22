@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:register/controller/login_controller.dart';
 import 'package:register/model/customtextfield_model.dart';
 import 'package:register/model/cutombutton.dart';
 import 'package:register/screen/forgot_password_screen.dart';
+import 'package:register/screen/profile_screen.dart';
 
 import 'register_screen.dart';
 
@@ -10,6 +13,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final LoginController loginController = Get.put(LoginController());
     return Container(
       constraints: const BoxConstraints.expand(),
       decoration: const BoxDecoration(
@@ -42,12 +46,18 @@ class LoginScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Customtextfeild(
+              Customtextfeild(
+                onChanged: (v) {
+                  loginController.username(v);
+                },
                 borderColor: Colors.white,
                 hintText: "Username",
                 //labelText: "Username",
               ),
-              const Customtextfeild(
+              Customtextfeild(
+                onChanged: (v) {
+                  loginController.password(v);
+                },
                 borderColor: Colors.white,
                 hintText: "Password",
                 obscureText: true,
@@ -74,13 +84,27 @@ class LoginScreen extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(25.0),
-                child: CustomButton(
-                  text: "SIGN IN",
-                  fillColor: Colors.pink[400],
-                  textStyle: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.white,
+                child: Obx(
+                  () => CustomButton(
+                    isEnable: loginController.password.value != "" &&
+                            loginController.username.value != ""
+                        ? true
+                        : false,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProfileScreen(),
+                        ),
+                      );
+                    },
+                    text: "SIGN IN",
+                    fillColor: Colors.pink[400],
+                    textStyle: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
