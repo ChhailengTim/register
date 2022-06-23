@@ -98,7 +98,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   children: [
                     Checkbox(
                         value: isCheck,
-                        onChanged: (bool) {
+                        onChanged: (v) {
                           setState(() {
                             isCheck = !isCheck;
                           });
