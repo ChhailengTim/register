@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 class AppbarModel extends StatelessWidget {
-  const AppbarModel({Key? key}) : super(key: key);
+  const AppbarModel({Key? key, this.onTap}) : super(key: key);
+
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: onTap,
           icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.orange,
