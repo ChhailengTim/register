@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:register/landing_page/model/offer_model.dart';
 import 'package:register/landing_page/model/product_model.dart';
 
 class ProductController extends GetxController {
@@ -35,6 +36,29 @@ class ProductController extends GetxController {
       img: "https://www.pngmart.com/files/1/Toothbrush-Clip-Art-PNG.png",
       title: "Toothbrush",
       price: "\$3/1 Set",
+    ),
+  ].obs;
+
+  List offers = <Offer>[
+    Offer(
+      pic:
+          "https://cdn.pixabay.com/photo/2016/03/31/19/39/cartoon-1295191_1280.png",
+      label: "Varified Product",
+    ),
+    Offer(
+      pic:
+          "https://images.squarespace-cdn.com/content/v1/5f9819d7325eb2480b36298b/1606820487625-P1AYWY7AZGFKMC3UO3XM/Security-amico.png?format=1000w",
+      label: "Security Insured",
+    ),
+    Offer(
+      pic:
+          "https://www.pngplay.com/wp-content/uploads/7/Customer-PNG-Photos.png",
+      label: "Customer Statisfaction",
+    ),
+    Offer(
+      pic:
+          "https://www.freeiconspng.com/thumbs/services-icon-png/service-department-wrench-icon-15.png",
+      label: "Varified Product",
     ),
   ].obs;
 }
