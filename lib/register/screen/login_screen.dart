@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:register/controller/login_controller.dart';
-import 'package:register/model/customtextfield_model.dart';
-import 'package:register/model/cutombutton.dart';
-import 'package:register/screen/forgot_password_screen.dart';
-import 'package:register/screen/profile_screen.dart';
+import 'package:register/register/controller/login_controller.dart';
+import 'package:register/register/model/customtextfield_model.dart';
+import 'package:register/register/model/cutombutton.dart';
+import 'package:register/register/screen/forgot_password_screen.dart';
+import 'package:register/register/screen/profile_screen.dart';
 
 import 'register_screen.dart';
 

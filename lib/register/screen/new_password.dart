@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:register/model/customtextfield_model.dart';
-import 'package:register/model/cutombutton.dart';
-import 'package:register/screen/confirm_screen.dart';
+import 'package:register/register/model/customtextfield_model.dart';
+import 'package:register/register/model/cutombutton.dart';
 
-class ForgotPasswordScreen extends StatelessWidget {
-  const ForgotPasswordScreen({Key? key}) : super(key: key);
+class NewPasswordScreen extends StatelessWidget {
+  const NewPasswordScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "Forgot password",
+                "Reset new password",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -37,7 +36,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 height: 5,
               ),
               const Text(
-                "Enter your Email or Phone for the verification process.\nWe will send 6 digits code to your option.",
+                "Set the new password for your account so\nyou can login and accesss all the feature.",
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -47,21 +46,18 @@ class ForgotPasswordScreen extends StatelessWidget {
               ),
               const Customtextfeild(
                 borderColor: Colors.white,
-                hintText: "Email or Phone",
+                hintText: "new password",
+                //labelText: "Username",
+              ),
+              const Customtextfeild(
+                borderColor: Colors.white,
+                hintText: "confirm new password",
                 //labelText: "Username",
               ),
               Padding(
                 padding: const EdgeInsets.all(25.0),
                 child: CustomButton(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ConfirmScreen(),
-                      ),
-                    );
-                  },
-                  text: "Continue",
+                  text: "Confirm reset",
                   fillColor: Colors.pink[400],
                   textStyle: const TextStyle(
                     fontWeight: FontWeight.bold,

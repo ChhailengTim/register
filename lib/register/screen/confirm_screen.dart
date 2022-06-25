@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:register/model/customtextfield_model.dart';
-import 'package:register/model/cutombutton.dart';
-import 'package:register/screen/new_password.dart';
+import 'package:register/register/model/customtextfield_model.dart';
+import 'package:register/register/model/cutombutton.dart';
+import 'package:register/register/screen/new_password.dart';
 
 class ConfirmScreen extends StatelessWidget {
   const ConfirmScreen({Key? key}) : super(key: key);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:register/model/customtextfield_model.dart';
-import 'package:register/model/cutombutton.dart';
-import 'package:register/model/social_model.dart';
+import 'package:register/register/model/customtextfield_model.dart';
+import 'package:register/register/model/cutombutton.dart';
+import 'package:register/register//model/social_model.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
