@@ -1,9 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:register/landing_page/controller/product_controller.dart';
 import 'package:register/landing_page/model/appbar_model.dart';
 import 'package:register/landing_page/model/profile_model.dart';
 import 'package:register/landing_page/model/search_model.dart';
+import 'package:register/landing_page/screen/offer_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -29,7 +31,17 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const AppbarModel(),
-                  const ProductModel(),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => const OfferScreen(),
+                        ),
+                      );
+                    },
+                    child: const ProductModel(),
+                  ),
                   const SearchModel(),
                   const SizedBox(
                     height: 10,
