@@ -22,6 +22,10 @@ samples, guidance on mobile development, and a full API reference.
 ![4](https://user-images.githubusercontent.com/80568234/174944862-012231d6-96a6-4557-8712-178d162512ca.gif)
 ![1](https://user-images.githubusercontent.com/80568234/174969873-f3f9de00-ec8a-4d11-8719-9720001c4f82.gif)
 
+2.Payment Screen <br />
+<img width="448" alt="Screen Shot 2022-06-27 at 10 35 11 AM" src="https://user-images.githubusercontent.com/80568234/175855249-4ca68821-2ca6-4cce-8c25-07a8d83e5b7f.png">
+
+
 3.Landing page <br />
 
 ![1](https://user-images.githubusercontent.com/80568234/175854662-1043372c-0870-41a2-b7d5-f32146b76956.gif)
