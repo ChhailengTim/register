@@ -29,7 +29,7 @@ class ProductController extends GetxController {
     ),
     Product(
       img: "https://www.pngmart.com/files/22/Orange-juice-PNG-Pic.png",
-      title: "Champagne Bottle",
+      title: "Champagne",
       price: "\$6/1 Battle",
     ),
     Product(
