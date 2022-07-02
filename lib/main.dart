@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'payment/screen/payment_screen.dart';
+import 'package:register/spotify_music_player/screen/player_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PaymentScreen(),
+      home: PlayerScreen(),
     );
   }
 }
